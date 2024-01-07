@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <center>
+    <h1 style="color: rgb(63, 14, 84); height:50px;">ToDo App</h1>
+    <h5><small>{{request.user}} add your task here</small></h5>
+    <form action="" method="post" class="mt-3">
+        {%csrf_token%}
+        {{form.as_table}}
+        <button class="btn btn-outline-dark" style="height:35px;">Add</button>
+    </form>
+    <br><br>
+    </center>
+
+{% endblock %}
